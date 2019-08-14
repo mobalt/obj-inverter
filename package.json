@@ -1,0 +1,46 @@
+{
+  "name": "obj-inverter",
+  "version": "0.0.1",
+  "description": "Invert an object among two different schemas",
+  "main": "index.js",
+  "repository": "https://github.com/mobalt/obj-inverter.git",
+  "author": "Moises Baltazar <me@moisesb.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "invertible": "mobalt/invertible"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "esm": "^3.2.25",
+    "mocha": "^6.2.0",
+    "prettier-eslint": "^9.0.0",
+    "prettier-eslint-cli": "^5.0.0"
+  },
+  "mocha": {
+    "color": true,
+    "spec": "test/**/*.spec.js",
+    "slow": 75,
+    "timeout": 2000,
+    "reporter": "list",
+    "require": [
+      "esm"
+    ],
+    "ui": "bdd",
+    "watch": false
+  },
+  "prettier": {
+    "trailingComma": "all",
+    "tabWidth": 4,
+    "semi": false,
+    "singleQuote": true,
+    "overrides": [
+      {
+        "files": "*.{yml,yaml,json}",
+        "options": {
+          "tabWidth": 2
+        }
+      }
+    ]
+  }
+}
